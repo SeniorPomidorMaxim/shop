@@ -1,0 +1,404 @@
+/* ============================= Базовые настройки ============================ */
+:root {
+    --bg-color: #081128; /* Темный фон с оттенком синего космоса */
+    --text-color: #080601; /* Белый текст для контраста с темным фоном */
+    --accent-color: #7da9d6; /* Светло-голубой акцент для выделения элементов и ссылок */
+    --contrast-color: #36465d; /* Темно-синий контрастный цвет для подписей или второстепенного текста */
+    --gray-color: #8d8d8d; /* Серый цвет, который добавляет оттенки и переходы между блоками */
+    --red-color: #d13438; /* Ярко-красный цвет для выделения важных элементов или предупреждений */
+    --card-color: #dbdcdf; /* Цвет карточек или фона блоков для контраста с фоном и добавления глубины */
+  }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header-top, .header-middle {
+    background-color: var(--bg-color);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.row {
+    position: relative;
+}
+
+/* ============================= Базовые настройки ============================ */
+
+/* ============================= Поисковая строка ============================ */
+
+
+/*ебля с расположением*/
+.col-md-4.order-md-1.d-flex form { /* Объедините селекторы классов и примените стили напрямую к форме */
+    position: absolute; 
+    top: 85px; /* Используйте интересующее вас значение. */
+    right: 0; /* Зафиксировать форму справа. */   
+}
+/*ебля с расположением*/
+
+
+
+/*поисковая строка цвет и текст внутри*/
+.col-md-4.order-md-1.d-flex .form-control {
+        background-color: var(--contrast-color); /* Задаем новый цвет для поисковой строки */
+        color: var(--text-color)
+}
+/*поисковая строка цвет и текст внутри*/
+
+
+/*поисковая строка рамка*/
+.col-md-4.order-md-1.d-flex .form-control:focus {
+    outline: none;
+    border-color: gold; /* изменение цвета border при фокусе на золотистый */
+    box-shadow: 0 0 10px gold; /* добавление золотистой тени вокруг элемента при фокусе */
+}
+/*поисковая строка рамка*/
+
+
+
+/* Отключение цвета кнопки бинокля при наведении и нажатии */
+.col-md-4.order-md-1.d-flex .btn.btn-outline-warning:hover,
+.col-md-4.order-md-1.d-flex .btn.btn-outline-warning:active {
+    box-shadow: 0 0 10px gold; /* добавление золотистой тени вокруг элемента при фокусе */
+  
+}
+/* Отключение цвета кнопки бинокля при наведении и нажатии */
+
+
+/* ============================= Биноколь лупа ============================ */
+.fa-solid.fa-binoculars {
+    color: var(--accent-color);
+    border: 1px solid #000000;
+}/* делает биноколь голубым а не желтым*/
+
+/* дрочка с подцветкой бинокля*/
+.btn-outline{
+    border: 1px solid white
+}
+.btn-outline:hover {
+    background-color: var(--bg-color); /* Измените на любой цвет фона, который вы хотите при наведении */
+    border-color: gold; /* Измените на любой цвет границы, который вы хотите при наведении */
+    box-shadow: 0 0 10px gold;
+    
+}
+/* дрочка с подцветкой бинокля*/
+/* ============================= Биноколь лупа ============================ */
+
+
+/*navbar*/
+.navbar{
+    background-color: var(--bg-color);
+    color:var(--bg-color);
+}
+/*navbar*/
+
+
+/* ============================= General rules ============================ */
+
+
+
+main.main {
+    flex: 1 1 auto;
+} /*  хуй знает за что отвечает*/
+
+/* ============================= General rules ============================ */
+
+
+/* ============================= HEADER 101-177  ============================ */
+
+
+
+/* ============================= ВК и ВАТСАП start ============================ */
+ul.social-icons {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}/* отвечает за кремпление ватсапа и вк*/
+
+ul.social-icons li {
+    margin-right: 10px;
+}/* отвечает за расположение вк и ватсапа*/
+
+ul.social-icons a {  
+    color: var(--accent-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100%;
+    float: left;
+    text-align: center;
+    transition: all .3s;
+} /* подцветка хуетка для ватсапа и вк и  прочие тыкалки*/
+
+ul.social-icons a:hover {
+    background-color: var(--contrast-color);
+    color: var(--accent-color);
+    /* подцветка хуетка для ватсапа и вк и  прочие тыкалки*/
+}
+/* ============================= ВК и ВАТСАП end ============================ */
+
+/* ============================= настройска логотипа DRONSHOPRU ============================ */
+.header-logo {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    transition: all .3s;
+    top: -22px; 
+}
+
+.header-logo:hover {
+    color: var(--gray-color);
+}
+/* ============================= настройска логотипа DRONSHOPRU ============================ */
+
+
+
+/* ============================= КОРЗИНА ЛАЙК ИСТОРИЯ КНОПКА ПОКУПОК ============================ */
+
+/*кнопка покупок*/
+.btn-purchase {
+    position: absolute;
+    right: 0;
+    opacity: 0.6; /* Установить прозрачность, чтобы показать, что кнопка заблокирована */
+    top: -20px;
+    height: 35px; /* Установите нужную высоту (толщину) */
+    width: 35px; 
+      
+    transition: border-color 1s ease-in-out; /* Добавим плавный переход */
+}
+/*Настройка моего всплывающего окна с покупками*/
+#offcanvasCart {
+    background-color: #333;
+    color: white; /* Цвет текста */
+    border-color: #000; /* Цвет рамки */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Тень */
+}
+/*Настройка моего всплывающего окна с покупками*/
+
+.btn-purchase:hover {
+    border: 1px solid var(--text-color) /* Измените цвет и толщину рамки по вашему усмотрению */
+}
+
+.icon-color {
+    color: var(--accent-color)
+}
+
+                                /*кнопка покупок*/
+/*Дрочка с иконками*/
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+}
+
+.buttons-container button {
+    width: 40px;    /* Установите нужный размер кнопки */
+    height: 40px;   /* Установите нужный размер кнопки */
+    margin: 0 10px;
+    background: none;
+    border: none;
+    color: #eee;    /* Цвет иконки */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.buttons-container button:hover,
+.buttons-container button:active {
+    /* при наведении и при активации загорается в красный цвет */
+    color: red;
+}
+.buttons-container button.active {
+    color: red;
+}
+
+/*Дрочка с иконками*/
+/* ============================= КОРЗИНА ЛАЙК ИСТОРИЯ КНОПКА ПОКУПОК ============================ */
+
+
+/* ============================= ЛИЧНЫЙ_КАБИНЕТ ============================ */
+.custom-dropdown li a {
+    background-color: transparent; 
+    color: var(--contrast-color);
+    width: auto;
+    height: 35px;
+    border-radius: 0;
+    font-size: 14px;  
+/* впадающие списки лк*/
+}
+.header-top .btn {
+    background-color: var(--accent-color);
+ /* цвет иконки лк*/
+}
+
+
+/* ============================= ЛИЧНЫЙ_КАБИНЕТ ============================ */
+
+
+/* ============================= HEADER 101-177 ============================ */
+
+
+/* ============================= Main  start============================ */
+
+
+
+/* ============================= Product card ============================ */
+
+@media (max-width: 620px) {
+    .col-lg-3.col-md-4.col-sm-6.mb-3 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+/* отвечает за расположение моих карт на мелком экране */
+}
+
+.product-card {
+    height: auto; /* высота элемента будет регулироваться автоматически */
+    transition: all .3s;
+    border: 1px solid var(--gray-color);
+    background-color: var(--card-color);
+    position: relative;
+    /*Рамка продуктовой карты*/
+}
+
+
+.section-title{
+    color: #eee9e9;
+}
+
+
+/* ============================= СЕРДЕЦЕ И КОРЗИНКА ПРОД КАРТЫ ============================ */
+
+.product-links .btn {
+    margin-right: 5px;
+    color: var(--accent-color);
+    border: none; 
+    transition: transform 0.1s ease; 
+ /* выделяет цветом корзинку и сердечко продуктовой карты, меняет их положение !!! переделать*/
+}
+.product-links .btn:hover {
+    transform: scale(1.2);
+    /* калдаебит сердечко и корзинку*/
+  }
+  /* ============================= СЕРДЕЦЕ И КОРЗИНКА ПРОД КАРТЫ ============================ */
+
+  .product-card:hover .additional-text {
+    display: block;
+    opacity: 1;
+}/* хуй знает за что отвечает*/
+
+.product-card:hover {
+    transform: scale(1.09);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    /* отвечает за наведение на карту*/
+}
+
+
+.product-card-offer {
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-transform: uppercase;
+    /* отвечает за то что внутри карты*/
+}
+
+
+ /* ============================= HIT and NEW ============================ */
+.product-card-offer>div {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.offer-hit {
+    background-color: var(--red-color);
+}
+.offer-new {
+    background-color: var(--accent-color);
+}
+.product-thumb {
+    text-align: center;
+    pointer-events: none;
+      
+}
+/* ============================= HIT and NEW ============================ */
+
+/* ============================= СОДЕРЖИМОЕ КАРТОЧКИ ============================ */
+.product-thumb img {
+    max-height: 250px;
+}
+.product-details {
+    padding: 10px 20px;
+}
+/* ============================= СОДЕРЖИМОЕ КАРТОЧКИ ============================ */
+.product-details h4 {
+    font-size: 1.2rem;
+/* размер текста имени товара*/
+}
+
+
+.product-price {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 800;
+    /*ценник */
+}
+
+.product-price small {
+    color: var(--gray-color);
+    font-weight: 400;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    /*старый ценник*/
+}
+
+/* ============================= Product card ============================ */
+
+
+/* ============================= Footer ============================ */
+footer {
+    background-color: var(--contrast-color);
+    padding: 10px 0;
+    color: #fff;
+}
+
+footer h4 {
+    color: var(--accent-color);
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+
+
+/* ============================= Footer ============================ */
+

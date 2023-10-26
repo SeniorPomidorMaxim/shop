@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+			<div class="btn-group dropdown">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ selected_category }}
+  </button>
+  <div class="dropdown-menu">
+    <!-- Другие элементы в этом списке -->
+    {% for sub in subcategories %}
+    <a class="dropdown-item" href="{% url 'categories_list' %}?category_request=motors_all">{{sub}}</a>
+    {% endfor %}
+  </div>
+</div>
+
+
+    <div class="row">
+        <div class="col-12">
+
+    </div>
+</div>
+
+            </div>
+
+
+
+
+{% endblock %}
+

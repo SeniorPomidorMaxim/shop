@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<div class="container-fluid">
+	<div class="row mb-5">
+		<div class="col-12">
+			<h2 class="section-title">
+				<span>Рекомендуемые товары</span>
+			</h2>
+		</div>
+	</div>
+
+	<div class="row">
+
+		{% for product in products %}
+		<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+			<a href="{% url 'about' %}" style="text-decoration: none; color: inherit;">
+				<div class="product-card">
+					<div class="product-card-offer">
+						<div class="offer-hit">Hit</div>
+						<div class="offer-new">New</div>
+					</div>
+					<div class="product-thumb p-3">
+						<img src="{{ product.photo.url }}" alt="">
+					</div>
+					<div class="product-details">
+						<h4>{{ product.title }}</h4>
+						<h4>{{ product.category }}</h4>
+						<h4>{{ product.subcategory }}</h4>
+												
+						<div class="product-bottom-details d-flex justify-content-between">
+							<div class="product-price">
+								${{ product.price }}
+								<h4>айди товара {{product.pk}}</h4>
+							</div>
+							<div class="product-links d-flex ml-auto">
+								<a href="#" class="btn btn-outline-secondary add-to-cart"
+									onclick="event.stopPropagation();"><i class="fas fa-shopping-cart"></i></a>
+								<a href="#" class="btn btn-outline-secondary add-to-cart"
+									onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>	
+		{% endfor %}
+
+
+	<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+		<a href="{% url 'about' %}" style="text-decoration: none; color: inherit;">
+			<div class="product-card">
+				<div class="product-card-offer">
+					<div class="offer-hit">Hit</div>
+					<div class="offer-new">New</div>
+				</div>
+				<div class="product-thumb p-3">
+					<img src="{% static 'shop/img/products/8.jpg' %}" alt="">
+				</div>
+				<div class="product-details">
+					<h4>товар 8</h4>
+
+					<div class="product-bottom-details d-flex justify-content-between">
+						<div class="product-price">
+							<small>$70</small>
+							$65
+						</div>
+						<div class="product-links d-flex ml-auto">
+							<a href="#" class="btn btn-outline-secondary add-to-cart"
+								onclick="event.stopPropagation();"><i class="fas fa-shopping-cart"></i></a>
+							<a href="#" class="btn btn-outline-secondary add-to-cart"
+								onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+</div>
+{% endblock %}

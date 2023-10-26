@@ -1,0 +1,710 @@
+
+					{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<link rel="stylesheet" href="{% static 'shop/css/main.css' %}">
+
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="header-top py-1">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+
+						<!--Вконтакте, ватсап, личный кабинет-->
+						<div class="col-12 col-md-4">
+
+							<ul class="social-icons d-flex justify-content-md-start">
+
+
+								<!--Вконтакте и ватсап-->
+								<li>
+									<a href="https://vk.com/maksim7777000">
+										<i class="fa-brands fa-vk"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://wa.me/+79000380366">
+										<i class="fa-brands fa-whatsapp"></i>
+									</a>
+								</li>
+								<!--Вконтакте и ватсап-->
+
+
+								<!--кнопка личный кабинет-->
+								<li class="ml-auto">
+									<div class="header-top-account">
+										<div class="dropdown">
+											<button class="btn btn-sm dropdown-toggle custom-button" type="button"
+												data-bs-toggle="dropdown" aria-expanded="false">
+												Личный кабинет
+												<i class="fa-solid fa-user"></i>
+											</button>
+
+											<ul class="dropdown-menu custom-dropdown">
+												<li>
+													<a class="dropdown-item" href="#">Войти в личный кабинет</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Регистрация</a>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</li>
+								<!--кнопка личный кабинет-->
+
+
+							</ul>
+
+						</div>
+						<!--Вконтакте, ватсап, личный кабинет-->
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="header-middle  py-4">
+				 <!--ЛОГО,ПОКУПКИ,FIND -->
+
+				<div class="container-fluid">
+					<div class="row">
+
+						<!--Логотип дроншопа-->
+						<div class="col-6 col-md-4">
+							<a href="main.html" class="header-logo h1">DRONSHOPRU</a>
+						</div>
+						<!--Логотип дроншопа-->
+
+
+						<!--вкладыш и кнопка покупок, лайков, истории заказов-->
+						<div class="col-6 col-md-4 order-md-2 cart-buttons text-end">
+
+
+							<!-- кнопка покупок -->
+							<button class="btn p-1 btn-purchase" type="button" data-bs-toggle="offcanvas"
+								data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+								<span class="badge cart-badge rounded-circle">
+									<i class="fa-solid fa-bookmark icon-color"></i>
+								</span>
+							</button>
+							<!-- кнопка покупок -->
+
+
+							<!-- всплывающий вкладыш покупок, лайков, истории -->
+							<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart"
+								aria-labelledby="offcanvasCartLabel">
+								<div class="offcanvas-header">
+									<h5 class="offcanvas-title" id="offcanvasCartLabel">Offcanvas</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+										aria-label="Close"></button>
+								</div>
+
+								<!--Настройка кнопок нравится, купленные, корзина-->
+								<div class="buttons-container">
+									<button id="showLiked"><i class="fa fa-heart"></i></button>
+									<button id="showBought"><i class="fa fa-clock-rotate-left"></i></button>
+									<button id="showCart"><i class="fa fa-shopping-cart"></i></button>
+								</div>
+
+								<!--Настройка кнопок нравится, купленные, корзина-->
+
+
+								<!-- Карточки товаров -->
+								<div class="offcanvas-body">
+									<div class="card col-12" id="liked"><!--Которые нравятся-->
+										<div class="card-body">
+											<div class="product-thumb p-3">
+												<img src="{% static 'shop/img/products/1.jpg' %}" alt="">
+											</div>
+											<h5 class="card-title">Название товара</h5>
+											<p class="card-text">Описание товара</p>
+											<!-- Дополнительные элементы для каждого товара -->
+										</div>
+									</div>
+
+
+
+									<div class="card col-12" id="bought"><!--Купленные ранее-->
+										<div class="card-body">
+											<div class="product-thumb p-3">
+												<img src="{% static 'shop/img/products/2.jpg' %}" alt="">
+											</div>
+											<h5 class="card-title">Название товара</h5>
+											<p class="card-text">Описание товара</p>
+											<!-- Дополнительные элементы для каждого товара -->
+										</div>
+									</div>
+
+
+									<div class="card col-12" id="cart"><!-- В корзине -->
+										<div class="card-body">
+											<div class="product-thumb p-3">
+												<img src="{% static 'shop/img/products/3.jpg' %}" alt="">
+											</div>
+											<h5 class="card-title">Название товара</h5>
+											<p class="card-text">Описание товара</p>
+											<!-- Дополнительные элементы для каждого товара -->
+										</div>
+									</div>
+
+								</div>
+								<!-- Карточки товаров -->
+							</div>
+							<!-- всплывающий вкладыш покупок, лайков, истории-->
+						</div>
+						<!--вкладыш и кнопка покупок, лайков, истории заказов-->
+
+
+					</div>
+
+					<!--Поиск и лупа-->
+					<div class="col-md-4 order-md-1 mt-2 mt-md-0 d-flex">
+						<form action="" class="w-100">
+							<div class="input-group w-100">
+								<input type="text" class="form-control" name="s" placeholder="Searching..."
+									aria-label="Searching..." aria-describedby="button-search">
+								<button class="btn btn-outline" type="submit" id="button-search">
+									<i class="fa-solid fa-binoculars"></i>
+								</button>
+							</div>
+						</form>
+					</div>
+					<!--Поиск и лупа-->
+				</div>
+				 <!--ЛОГО,ПОКУПКИ,FIND -->
+
+			</div>
+	</header>
+	</div>
+
+
+	<div class="header-bottom sticky-top">
+		<nav class="navbar navbar-expand-xxl " data-bs-theme="dark">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="offcanvas offcanvas-start" id="offcanvasNavbar" tabindex="-1"
+					aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Catalog</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav">
+
+
+							<li class="nav-item dropdown">
+								<a class="nav-link " href="categories.html" role="button" aria-expanded="false"
+									data-bs-auto-close="outside">
+									Аккумуляторы
+									<i class="fa-solid fa-car-battery"></i>
+								</a>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link " href="categories.html" role="button" aria-expanded="false"
+									data-bs-auto-close="outside">
+									Готовые дроны
+									<i class="fa-solid fa-check"></i>
+								</a>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link " href="categories.html" role="button" aria-expanded="false"
+									data-bs-auto-close="outside">
+									Полетные контролеры
+									<!--Сделать тыкательную копку-->
+									<i class="fa-solid fa-gauge-high"></i>
+								</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link" href="categories.html" role="button" aria-expanded="false"
+									data-bs-auto-close="outside">
+									Регуляторы оборотов
+									<i class="fa-solid fa-bolt"></i>
+
+								</a>
+							</li>
+
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+									aria-expanded="false" data-bs-auto-close="outside">
+									Видеосвязь
+									<i class="fa-solid fa-camera-retro"></i>
+
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">ВСЕ</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Аналоговая</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Цифровая</a>
+									</li>
+								</ul>
+							</li>
+
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+									aria-expanded="false" data-bs-auto-close="outside">
+									Моторы
+									<i class="fa-solid fa-microchip"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">ВСЕ</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">2207</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">2806</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">2812</a>
+									</li>
+
+								</ul>
+							</li>
+
+
+
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+									aria-expanded="false" data-bs-auto-close="outside">
+									Рамы
+									<i class="fa-solid fa-jet-fighter"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">ВСЕ</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">5 дюймов</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">6 дюймов</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">7 дюймов</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">9 дюймов</a>
+									</li>
+								</ul>
+							</li>
+
+
+
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+									aria-expanded="false" data-bs-auto-close="outside">
+									Радиосвязь
+									<i class="fa-solid fa-satellite-dish"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">ВСЕ</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Приемники</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Передатчики</a>
+									</li>
+
+								</ul>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+									aria-expanded="false" data-bs-auto-close="outside">
+									Винты
+									<i class="fa-solid fa-fan"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">ВСЕ</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">5 дюймов</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">6 дюймов</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">7 дюймов</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">9 дюймов</a>
+									</li>
+
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+									aria-expanded="false" data-bs-auto-close="outside">
+									Прочее
+									<i class="fa-regular fa-file-lines"></i>
+								</a>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+			</div>
+		</nav>
+	</div>
+
+	<!--карточки на долбаеба-->
+	<main class="main">
+
+		<section class="featured-products">
+			<div class="container-fluid">
+				<div class="row mb-5">
+					<div class="col-12">
+						<h2 class="section-title">
+							<span>Рекомендуемые товары</span>
+						</h2>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/1.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>товар 1</h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+
+
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/2.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>товар 2</h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/3.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>товар 3</h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/4.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>товар 4</h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/5.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>товар 5</h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/6.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>твоар 6 </h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/7.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>товар 7</h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+						<a href="product.html" style="text-decoration: none; color: inherit;">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb p-3">
+									<img src="{% static 'shop/img/products/8.jpg' %}" alt="">
+								</div>
+								<div class="product-details">
+									<h4>товар 8</h4>
+
+									<div class="product-bottom-details d-flex justify-content-between">
+										<div class="product-price">
+											<small>$70</small>
+											$65
+										</div>
+										<div class="product-links d-flex ml-auto">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i
+													class="fas fa-shopping-cart"></i></a>
+											<a href="#" class="btn btn-outline-secondary add-to-cart"
+												onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+	</main>
+	<!--карточки на долбаеба-->
+
+
+	<!--FOOTER-->
+	<footer class="footer" id="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3 col-6">
+					<h4>Information</h4>
+					<ul class="list-unstyled">
+						<li><a href="main.html">Home</a></li>
+						<li><a href="#">Payment</a></li>
+						<li><a href="#">Delivery</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-6">
+					<h4>Working hours</h4>
+					<ul class="list-unstyled">
+						<li>Paris, str. Bretan</li>
+						<li>mon-fri: 9:00 - 18:00</li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-6">
+					<h4>Contacts</h4>
+					<ul class="list-unstyled">
+						<li><a href="tel:1234567890">123-456-7890</a></li>
+						<li><a href="tel:0987654321">098-765-4321</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-6">
+					<h4>Follow us</h4>
+					<ul class="footer-icons">
+						<li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+						<li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+						<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		</footer>
+	<!--FOOTER-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'shop/js/main.js' %}"></script>
+
+</body>
+
+</html>

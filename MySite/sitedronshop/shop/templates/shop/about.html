@@ -1,0 +1,357 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block extra_styles %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{% static 'shop/css/about.css' %}">
+    {% endblock %}
+
+
+
+    {% block content %}
+    <!--мэйн блок-->
+
+
+    <!--кнопки параметры, хуяметры, категории-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav class="breadcrumbs">
+                    <div class="btn-group">
+                        <button class="btn breadcrumb-btn btn-orange">Параметр 1</button>
+                        <button class="btn breadcrumb-btn btn-blue">Параметр 2</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn breadcrumb-btn btn-green dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Подкатегории
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Подкатегория 1</a></li>
+                            <li><a class="dropdown-item" href="#">Подкатегория 2</a></li>
+                            <li><a class="dropdown-item" href="#">Подкатегория 3</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--кнопки параметры, хуяметры, категории-->
+
+
+                <!--карусель с моими доп фотками-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 col-lg-4 mb-3">
+                    <div class="bg-white h-100">
+                        <div id="carouselExampleFade" class="carousel carousel-dark slide carousel-fade">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="C:\MyProjects\MySite\sitedronshop\static\shop\img\carusel\картина1.jpg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\MyProjects\MySite\sitedronshop\static\shop\img\carusel\картинка 3.jpg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="C:\MyProjects\MySite\sitedronshop\static\shop\img\carusel\картинка 2.jpg"
+                                        class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--карусель с моими доп фотками-->
+
+
+                <!--хуйня с инфой по моей продуктовой карточке-->
+                <div class="col-md-7 col-lg-8 mb-3">
+                    <div class="bg-white-product-content-p-3-h-100">
+                        <h1 class="section-title h3"><span>Product Name</span></h1>
+
+                        <div class="product-price">
+                            $65
+                        </div>
+                        <div class="text-about-product">
+                            <p> ipsum dolor sit amet, consectetur adipisicing elit. Maxime ducimus adipisci alias,
+                                minus totam fugiat quia unde ipsum aliquam suscipit officia ut iure sunt quis,
+                                doloremque quibusdam, similique eos veritatis.</p>
+                        </div>
+
+
+                        <div class="product-add2cart">
+                            <div class="input-group">
+                                <input type="number" class="form-control" value="1" min="1">
+                                <button class="btn btn-warning"><i class="fas fa-shopping-cart"></i> Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                        <!--хуйня с инфой по моей продуктовой карточке-->
+                        <div class="row mt-3">
+                            <div class="col-lg-4 mb-2">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-solid fa-shield-halved"></i> Гарантия
+                                        </h5>
+                                        <ul class="list-unstyled">
+                                            <li>Гарантия 1 год</li>
+                                            <li>Возвращение товара в течение 14 дней</li>
+                                            <li>Гарантия качества</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-2">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-solid fa-truck-fast"></i> Доставка</h5>
+                                        <ul class="list-unstyled">
+                                            <li>Доставка по всей стране</li>
+                                            <li>Доставка почтой</li>
+                                            <li>Самовывоз</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-2">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-regular fa-credit-card"></i> Оплата</h5>
+                                        <ul class="list-unstyled">
+                                            <li>Наличный рассчет</li>
+                                            <li>Безналичный рассчет</li>
+                                            <li>VISA/MasterCard</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                 <!--хуйня с инфой по моей продуктовой карточке-->
+            </div>
+
+            <!--панель с отзывами и характеристиками-->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="product-content-details bg-white p-4">
+                        <ul class="nav nav-tabs-about" id="myTab" role="tablist">
+                            <li class="nav-item-about" role="presentation">
+                                <button class="nav-link-about active" id="features-tab" data-bs-toggle="tab"
+                                    data-bs-target="#features-tab-pane" type="button" role="tab"
+                                    aria-controls="features-tab-pane" aria-selected="true">Характеристика</button>
+                            </li>
+                            <li class="nav-item-about" role="presentation">
+                                <button class="nav-link-about" id="description-tab" data-bs-toggle="tab"
+                                    data-bs-target="#description-tab-pane" type="button" role="tab"
+                                    aria-controls="description-tab-pane" aria-selected="false">Отзывы</button>
+                            </li> 
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade" id="description-tab-pane" role="tabpanel"
+                                aria-labelledby="description-tab">
+                                <p>я такой-то товар</p>
+                            </div>
+                            <div class="tab-pane fade show active" id="features-tab-pane" role="tabpanel"
+                                aria-labelledby="features-tab">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Colors</th>
+                                            <td>white, black, pink</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Sizes</th>
+                                            <td>S, M, L</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--панель с отзывами и характеристиками-->
+
+        </div>
+
+        <!--карусель с похожими товарами-->
+    <section class="new-products">
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            <span>Новинки</span>
+                        </h2>
+                    </div>
+                </div>
+                
+                <!--карусель с похожими товарами-->
+                <div class="owl-carousel owl-theme owl-carousel-full">
+                    <!--продукт тест 1-->
+                    <div class="product-card">
+                        <a href="about.html" style="text-decoration: none; color: inherit;">
+                            <div class="product-card-offer">
+                                <div class="offer-hit">Hit</div>
+                                <div class="offer-new">New</div>
+                            </div>
+                            <div class="product-thumb p-3">
+                                <img src="{% static 'shop/img/products/8.jpg' %}" >
+                            </div>
+                            <div class="product-details">
+                                <h4>товар 8</h4>
+
+                                <div class="product-bottom-details d-flex justify-content-between">
+                                    <div class="product-price">
+                                        <small>$70</small>
+                                        $65
+                                    </div>
+                                    <div class="product-links d-flex ml-auto">
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>   
+                    </div>
+                    <!--продукт тест 2-->
+                    <div class="product-card">
+                    <a href="about.html" style="text-decoration: none; color: inherit;">
+                        <div class="product-card-offer">
+                            <div class="offer-hit">Hit</div>
+                            <div class="offer-new">New</div>
+                        </div>
+                        <div class="product-thumb p-3">
+                            <img src="{% static 'shop/img/products/7.jpg' %}" >
+                        </div>
+                        <div class="product-details">
+                            <h4>товар 8</h4>
+
+                            <div class="product-bottom-details d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>$70</small>
+                                    $65
+                                </div>
+                                <div class="product-links d-flex ml-auto">
+                                    <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                        onclick="event.stopPropagation();"><i class="fas fa-shopping-cart"></i></a>
+                                    <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                        onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <!--продукт тест 3-->
+                    <div class="product-card">
+                        <a href="about.html" style="text-decoration: none; color: inherit;">
+                            <div class="product-card-offer">
+                                <div class="offer-hit">Hit</div>
+                                <div class="offer-new">New</div>
+                            </div>
+                            <div class="product-thumb p-3">
+                                <img src="{% static 'shop/img/products/6.jpg' %}" >
+                            </div>
+                            <div class="product-details">
+                                <h4>товар 8</h4>
+    
+                                <div class="product-bottom-details d-flex justify-content-between">
+                                    <div class="product-price">
+                                        <small>$70</small>
+                                        $65
+                                    </div>
+                                    <div class="product-links d-flex ml-auto">
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                     <!--продукт тест 4-->
+                     <div class="product-card">
+                        <a href="about.html" style="text-decoration: none; color: inherit;">
+                            <div class="product-card-offer">
+                                <div class="offer-hit">Hit</div>
+                                <div class="offer-new">New</div>
+                            </div>
+                            <div class="product-thumb p-3">
+                                <img src="{% static 'shop/img/products/4.jpg' %}" >
+                            </div>
+                            <div class="product-details">
+                                <h4>товар 8</h4>
+    
+                                <div class="product-bottom-details d-flex justify-content-between">
+                                    <div class="product-price">
+                                        <small>$70</small>
+                                        $65
+                                    </div>
+                                    <div class="product-links d-flex ml-auto">
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    <!--продукт тест 5-->
+                    <div class="product-card">
+                        <a href="about.html" style="text-decoration: none; color: inherit;">
+                            <div class="product-card-offer">
+                                <div class="offer-hit">Hit</div>
+                                <div class="offer-new">New</div>
+                            </div>
+                            <div class="product-thumb p-3">
+                                <img src="{% static 'shop/img/products/8.jpg' %}" >
+                            </div>
+                            <div class="product-details">
+                                <h4>товар 8</h4>
+    
+                                <div class="product-bottom-details d-flex justify-content-between">
+                                    <div class="product-price">
+                                        <small>$70</small>
+                                        $65
+                                    </div>
+                                    <div class="product-links d-flex ml-auto">
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="#" class="btn btn-outline-secondary add-to-cart"
+                                            onclick="event.stopPropagation();"><i class="fa-solid fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>    
+                </div>
+                 <!--карусель с похожими товарами-->
+            </div>
+    </section>
+        {% endblock %}
+       
+        {% block extra_scripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="{% static 'shop/js/about.js' %}"></script>
+        {% endblock %}
+    
+
