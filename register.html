@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    <p>
+        <h1>Заполните данные для авторизации</h1>
+                    <div>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <div>
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+            </p>
+</body>
+</html>
